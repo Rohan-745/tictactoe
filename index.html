@@ -895,13 +895,6 @@
             initializeGame();
         }
 
-        function showHome() {
-            document.getElementById('homeScreen').classList.remove('hidden');
-            document.getElementById('gameScreen').classList.remove('active');
-            document.getElementById('difficultySelector').classList.remove('show');
-            hideWinPopup();
-        }
-
         function resetGame() {
             currentPlayer = 'X';
             gameActive = true;
@@ -916,6 +909,13 @@
             
             hideWinPopup();
             updateGameStatus();
+        }
+        function showHome() {
+            document.getElementById('homeScreen').classList.remove('hidden');
+            document.getElementById('gameScreen').classList.remove('active');
+            document.getElementById('difficultySelector').classList.remove('show');
+            hideWinPopup();
+            resetGame();
         }
 
         function exitGame() {
